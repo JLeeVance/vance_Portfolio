@@ -29,3 +29,8 @@ export default function Nav(){
     )
 
 }
+
+/*
+Need to add Links to Instagram / Social Media on Right side of NavBar
+Need to Include Resume for click to download on Right side of NavBar as well
+*/
