@@ -30,6 +30,11 @@ module.exports = {
         customAccentPink: '#e1bebe',
         customBrown: '#bdb5b9',
       },
+      fontFamily: {
+        poiret: ['Poiret One', 'cursive'],
+        montserrat: [ 'Montserrat', 'sans-serif'],
+        armata: ['Armata', 'sans-serif'],
+      },
     },
   },
   plugins: [],
