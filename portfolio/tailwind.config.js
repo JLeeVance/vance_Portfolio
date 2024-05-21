@@ -23,6 +23,13 @@ module.exports = {
       animation: {
         wiggle: 'wiggle 1s ease-in-out infinite',
       },
+      colors: {
+        customSage: '#bbceb2',
+        customDSage: '#a6b896',
+        customBeige: '#d8cfc7',
+        customAccentPink: '#e1bebe',
+        customBrown: '#bdb5b9',
+      },
     },
   },
   plugins: [],
