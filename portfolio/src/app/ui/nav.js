@@ -58,7 +58,6 @@ export default function Nav(){
         <div className='flex flex-row bg-customSage py-5'>
             {navOptions}    
         </div>
-        
     )
 }
 
