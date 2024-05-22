@@ -28,7 +28,8 @@ module.exports = {
         customDSage: '#a6b896',
         customBeige: '#d8cfc7',
         customAccentPink: '#e1bebe',
-        customBrown: '#bdb5b9',
+        customBrown: '#654321',
+        customDBrown: '#4F301F',
       },
       fontFamily: {
         poiret: ['Poiret One', 'cursive'],

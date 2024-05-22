@@ -1,28 +1,66 @@
-import React from "react";
+import {React, useContext} from "react";
 import Link from "next/link";
+import { NavbarContext } from "../contexts/navBarContext";
 
-
-const paths = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Portfolio', href: '/portfolio'},
-];
+// const paths = [
+//     { name: 'Home', href: '/' },
+//     { name: 'About', href: '/about' },
+//     { name: 'Portfolio', href: '/portfolio'},
+// ];
 
 export default function Nav(){
 
-    let navOptions = paths.map((path) => {
+    const { navbarSelection, setNavbarSelection } = useContext(NavbarContext)
+
+    const getPaths = (navbarSelection) => {
+        switch(navbarSelection){
+            case 'Development':
+                return [ 
+                    { name: 'Home', href: '/' },
+                    { name: 'About', href: '/about' },
+                    { name: 'Portfolio', href: '/portfolio'},
+                ];
+            case 'Performance':
+                return [
+                    { name: 'Home', href: '/' },
+                ];
+            default:
+                return [
+                    { name: 'Performance', href: '/performance'},
+                    { name: 'Development', href: '/development'}
+                ];
+            }    
+        }
+
+    const handleContextChange = (path) => {
+        switch(path){
+            case 'Home':
+                setNavbarSelection('');
+            case 'Performance':
+                setNavbarSelection('Performance');
+            case 'Development':
+                setNavbarSelection('Development');
+            default:
+                return
+        }
+    }
+
+    let navOptions = getPaths().map((path) => {
         return(
-            <Link class='p-1 mx-1 border-2 rounded-full border-lime-900/50 bg-slate-50 text-slate-500 hover:bg-lime-900/50 hover:text-white hover:underline hover:border-lime-900'
+            <Link className='p-1 mx-1 border-2 rounded-full border-customDSage bg-slate-50 text-slate-500 hover:bg-customSage hover:text-white hover:underline hover:border-customSage'
                 key={path.name}
-                href={path.href}>
+                href={path.href}
+                onClick={handleContextChange(path.name)}
+                >
                 {path.name}
             </Link>
         )
     })
 
 
+
     return(
-        <div class='flex flex-row bg-lime-900 py-5'>
+        <div className='flex flex-row bg-customSage py-5'>
             {navOptions}    
         </div>
         
