@@ -1,23 +1,20 @@
-import { Inter } from "next/font/google";
+'use client'
+
+import { NavbarProvider } from "./contexts/navBarContext";
 import "./globals.css";
 import Nav from "./ui/nav";
-
-const inter = Inter({ subsets: ["latin"] });
-
-export const metadata = {
-  title: "Jay Vance Portfolio",
-  description: "Software Engineer Jay Vance's portfolio",
-};
 
 export default function RootLayout({ children }) {
   return (
   <>
-    <html>
-      <body className={inter.className}>
-        <Nav />
-        <div>
-          {children}
-        </div>
+    <html lang='en'>
+      <body>
+        <NavbarProvider>
+          <Nav />
+          <div>
+            {children}
+          </div>
+        </NavbarProvider>
       </body>
     </html>
   </>
