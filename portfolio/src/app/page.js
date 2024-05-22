@@ -22,11 +22,15 @@ export default function Home() {
           <p className='font-armata text-md text-customBrown'>Professional Actor</p>
         </div>
         <div className="col-span-1 text-center font-armata text-customBrown">
-            <Link href='/development' onClick={() => handleNavClick('Development')}>Development</Link>
+            <Link href='/development' className='animate-wiggle' onClick={() => handleNavClick('Development')}>
+              <p className='animate-wiggle'>Development</p>
+            </Link>
         </div>
         <div className="col-span-1" />
         <div className="col-span-1 text-center font-armata text-customBrown">
-            <Link href='/performance' onClick={() => handleNavClick('Performance')} >Performance</Link>
+            <Link href='/performance' className='animate-wiggle' onClick={() => handleNavClick('Performance')}>
+              <p className='animate-wiggle'>Performance</p>
+            </Link>
         </div>
       </div>
     </div>
