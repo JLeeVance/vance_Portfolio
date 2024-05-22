@@ -1,6 +1,16 @@
+'use client'
 
+import Link from "next/link";
+import { useContext } from "react";
+import { NavbarContext } from "./contexts/navBarContext";
 
 export default function Home() {
+
+  const { navbarSelection, setNavbarSelection } = useContext(NavbarContext)
+
+  const handleNavClick = (path) => {
+    setNavbarSelection(path)
+  }
 
   return (
     <div className='flex justify-center min-h-[52vh]'>
@@ -12,11 +22,11 @@ export default function Home() {
           <p className='font-armata text-md text-customBrown'>Professional Actor</p>
         </div>
         <div className="col-span-1 text-center font-armata text-customBrown">
-            <p>Development</p>
+            <Link href='/development' onClick={() => handleNavClick('Development')}>Development</Link>
         </div>
         <div className="col-span-1" />
         <div className="col-span-1 text-center font-armata text-customBrown">
-            <p>Performance</p>
+            <Link href='/performance' onClick={() => handleNavClick('Performance')} >Performance</Link>
         </div>
       </div>
     </div>

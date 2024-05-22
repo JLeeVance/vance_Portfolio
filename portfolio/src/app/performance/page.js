@@ -6,3 +6,5 @@ export default function Performance(){
         </>
     )
 }
+
+// This will be the landing page for Performance

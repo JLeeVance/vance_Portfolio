@@ -10,8 +10,8 @@ export default function Nav(){
         switch(navbarSelection){
             case 'Development':
                 return [ 
-                    { name: 'About', href: '/about' },
-                    { name: 'Portfolio', href: '/portfolio'},
+                    { name: 'Portfolio', href: '/development/portfolio'},
+                    { name: 'Contact', href: '/development/contact'},
                     { name: 'Home', href: '/' },
                 ];
             case 'Performance':
@@ -19,12 +19,9 @@ export default function Nav(){
                     { name: 'Home', href: '/' },
                 ];
             default:
-                return [
-                    { name: 'Development', href: '/development'},
-                    { name: 'Performance', href: '/performance'},
-                ];
-            }    
-        }
+                return []
+            };    
+        };
 
     const handleContextChange = (path) => {
         switch(path){
@@ -44,22 +41,22 @@ export default function Nav(){
 
     let navOptions = getPaths(navbarSelection).map((path) => {
         return(
-            <Link className='p-1 mx-1 border-2 rounded-full border-customDSage bg-slate-50 text-slate-500 hover:bg-customSage hover:text-white hover:underline hover:border-customSage'
+            <Link className='flex items-center justify-center p-3 mx-1 border-2 h-100 rounded-full border-customDSage bg-slate-50 text-slate-500 hover:bg-customSage hover:text-white hover:underline hover:border-customSage'
                 key={path.name}
                 href={path.href}
                 onClick={() => {handleContextChange(path.name)}}
                 >
                 {path.name}
             </Link>
-        )
-    })
+        );
+    });
 
     return(
-        <div className='flex flex-row bg-customSage py-5'>
+        <div className='flex flex-row bg-customSage py-5 h-[100px]'>
             {navOptions}    
         </div>
-    )
-}
+    );
+};
 
 /*
 Need to add Links to Instagram / Social Media on Right side of NavBar
