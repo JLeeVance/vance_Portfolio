@@ -23,13 +23,13 @@ export default function Home() {
         </div>
         <div className='col-span-1 text-center font-armata text-customBrown text-[1.75vh] mt-[10vh]'>
             <Link href='/development' onClick={() => handleNavClick('Development')}>
-              <span className='animate-lightGlowSage'>Development</span>
+              <span className='animate-lightGlowSage animate-pulse'>Development</span>
             </Link>
         </div>
         <div className='col-span-1 mt-10' />
         <div className='col-span-1 text-center font-armata text-customBrown text-[1.75vh] mt-[10vh]'>
             <Link href='/performance' onClick={() => handleNavClick('Performance')}>
-              <span className='animate-lightGlowSage'>Performance</span>
+              <span className='animate-lightGlowSage animate-pulse'>Performance</span>
             </Link>
         </div>
       </div>
