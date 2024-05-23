@@ -1,9 +1,9 @@
+import DevHeader from "../ui/devHeader"
+
 export default function Development(){
 
     return(
-        <>
-            <h1>Development Landing</h1>
-        </>
+        <DevHeader />
     )
 }
 
