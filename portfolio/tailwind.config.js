@@ -22,10 +22,25 @@ module.exports = {
         pulse: {
           '0%, 100%': { opacity: '1' },
           '50%': { opacity: '.5' },
+        },
+        // Format for box-shadow arguments:
+        //    box-shadow: h-offset v-offset blur spread color;
+        //
+        //    Middle ( 50% ) of the keyframe should glow MORE
+        //
+        glow: {
+          '0%, 100%': { 
+            textShadow: "0 0 px1 #fff" 
+          },
+          '50%': {
+            textShadow: '0 0 1px #a6b896, 0 0 .75px #a6b896, 0 0 .5px #a6b896, 0 0 .25px #a6b896' 
+          }
         }
       },
       animation: {
         wiggle: 'wiggle 1s ease-in-out infinite',
+        pulse: 'pulse 2s ease-in-out infinite',
+        lightGlowSage: 'glow 2s ease-in-out infinite'
       },
       colors: {
         customSage: '#bbceb2',
@@ -33,12 +48,12 @@ module.exports = {
         customBeige: '#d8cfc7',
         customAccentPink: '#e1bebe',
         customBrown: '#654321',
-        customDBrown: '#4F301F',
+        customDBrown: '#4F301F'
       },
       fontFamily: {
         poiret: ['Poiret One', 'cursive'],
         montserrat: [ 'Montserrat', 'sans-serif'],
-        armata: ['Armata', 'sans-serif'],
+        armata: ['Armata', 'sans-serif']
       },
     },
   },

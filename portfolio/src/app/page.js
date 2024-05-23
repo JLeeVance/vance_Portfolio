@@ -1,8 +1,8 @@
 'use client'
 
-import Link from "next/link";
-import { useContext } from "react";
-import { NavbarContext } from "./contexts/navBarContext";
+import Link from 'next/link';
+import { useContext } from 'react';
+import { NavbarContext } from './contexts/navBarContext';
 
 export default function Home() {
 
@@ -16,20 +16,20 @@ export default function Home() {
     <div className='flex justify-center min-h-[52vh]'>
       <div className='grid grid-cols-3 gap-1'>
         <div className='col-span-3 text-center'>
-          <p className='text-9xl font-poiret text-customDBrown mt-40 mb-10 ' >J Vance</p>
-          <p className='font-armata text-md text-customBrown'>Full-Stack Software Engineer</p>
+          <p className='text-[15vh] font-poiret text-customDBrown mt-40 mb-10 ' >J Vance</p>
+          <p className='text-[2vh] font-armata text-customBrown'>Full-Stack Software Engineer</p>
           <hr className='border-customDSage w-100 my-2' />
-          <p className='font-armata text-md text-customBrown'>Professional Actor</p>
+          <p className='text-[2vh] font-armata text-customBrown'>Professional Actor</p>
         </div>
-        <div className="col-span-1 text-center font-armata text-customBrown">
-            <Link href='/development' className='animate-wiggle' onClick={() => handleNavClick('Development')}>
-              <p className='animate-wiggle'>Development</p>
+        <div className='col-span-1 text-center font-armata text-customBrown text-[1.75vh] mt-[10vh]'>
+            <Link href='/development' onClick={() => handleNavClick('Development')}>
+              <span className='animate-lightGlowSage'>Development</span>
             </Link>
         </div>
-        <div className="col-span-1" />
-        <div className="col-span-1 text-center font-armata text-customBrown">
-            <Link href='/performance' className='animate-wiggle' onClick={() => handleNavClick('Performance')}>
-              <p className='animate-wiggle'>Performance</p>
+        <div className='col-span-1 mt-10' />
+        <div className='col-span-1 text-center font-armata text-customBrown text-[1.75vh] mt-[10vh]'>
+            <Link href='/performance' onClick={() => handleNavClick('Performance')}>
+              <span className='animate-lightGlowSage'>Performance</span>
             </Link>
         </div>
       </div>
